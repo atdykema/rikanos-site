@@ -12,6 +12,17 @@
     <body>
         <div class="main-container">
             <div class="main-hero">
+                <div class="image-showcase" id="top-showcase">
+                    <div class="showcase-image" id="img-3">
+                        img
+                    </div>
+                    <div class="showcase-image" id="img-2">
+                        img
+                    </div>
+                    <div class="showcase-image" id="img-1">
+                        img
+                    </div>
+                </div>
                 
                 <div class="main-banner">
                     <div class="main-slogan banner-item">
@@ -28,16 +39,105 @@
                     </div>
 
                 </div>
+
                 <div class="main-nav">
-                    <div class="nav-item" id="nav-1">Our Story</div>
-                    <div class="nav-item" id="nav-1">Pricing</div>
-                    <div class="nav-item" id="nav-1">Contact Us</div>
+                    <div class="nav-item" id="nav-1" onclick="createMenu(1)">Our Story</div>
+                    <div class="nav-item" id="nav-2" onclick="createMenu(2)">Pricing</div>
+                    <div class="nav-item" id="nav-3" onclick="createMenu(3)">Contact Us</div>
                 </div>
-                
+            
+                <div class="main-menu">
+                    <div class="content-window" id="content-window-1">
+                        <div class="content-window-text">
+                            Conteeent 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et purus ultrices, molestie tortor ac, fringilla elit. Donec tempor ullamcorper ex vitae maximus. Curabitur et blandit erat. Suspendisse ut nisi tortor. Vestibulum lorem eros, fermentum vitae nisi non, consectetur vulputate nisi. Nunc at pretium tellus. Nullam molestie erat nec dignissim condimentum. Aenean congue erat blandit odio viverra, nec scelerisque quam lacinia. Quisque ullamcorper dui tempus varius maximus. Morbi pellentesque erat vestibulum, dapibus mauris ac, dictum orci. Nulla a purus rutrum, imperdiet nibh nec, hendrerit est. Nulla ultrices condimentum lectus ac molestie. Praesent volutpat sagittis lectus at tempor. Vestibulum interdum nisi ac pulvinar posuere.
+                        </div>
+                        <div class="content-window-img">
+                        </div>
+                    </div>
+                    <div class="content-window" id="content-window-2">
+                        <div class="content-window-text">
+                            Conteeent 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et purus ultrices, molestie tortor ac, fringilla elit. Donec tempor ullamcorper ex vitae maximus. Curabitur et blandit erat. Suspendisse ut nisi tortor. Vestibulum lorem eros, fermentum vitae nisi non, consectetur vulputate nisi. Nunc at pretium tellus. Nullam molestie erat nec dignissim condimentum. Aenean congue erat blandit odio viverra, nec scelerisque quam lacinia. Quisque ullamcorper dui tempus varius maximus. Morbi pellentesque erat vestibulum, dapibus mauris ac, dictum orci. Nulla a purus rutrum, imperdiet nibh nec, hendrerit est. Nulla ultrices condimentum lectus ac molestie. Praesent volutpat sagittis lectus at tempor. Vestibulum interdum nisi ac pulvinar posuere.
+                        </div>
+                        <div class="content-window-img">
+                        </div>
+                    </div>
+                    <div class="content-window" id="content-window-3">
+                        <div class="content-window-text">
+                            Conteeent 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et purus ultrices, molestie tortor ac, fringilla elit. Donec tempor ullamcorper ex vitae maximus. Curabitur et blandit erat. Suspendisse ut nisi tortor. Vestibulum lorem eros, fermentum vitae nisi non, consectetur vulputate nisi. Nunc at pretium tellus. Nullam molestie erat nec dignissim condimentum. Aenean congue erat blandit odio viverra, nec scelerisque quam lacinia. Quisque ullamcorper dui tempus varius maximus. Morbi pellentesque erat vestibulum, dapibus mauris ac, dictum orci. Nulla a purus rutrum, imperdiet nibh nec, hendrerit est. Nulla ultrices condimentum lectus ac molestie. Praesent volutpat sagittis lectus at tempor. Vestibulum interdum nisi ac pulvinar posuere.
+                        </div>
+                        <div class="content-window-img">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-showcase" id="bottom-showcase">
+                    <div class="showcase-image" id="img-1">
+                        img
+                    </div>
+                    <div class="showcase-image" id="img-2">
+                        img
+                    </div>
+                    <div class="showcase-image" id="img-3">
+                        img
+                    </div>
+                </div>
             </div>
+            
 
         </div>
         
-        <script src="" async defer></script>
+        <script>
+            let lastClick = 0
+            function createMenu(type){  
+                if(lastClick === type){
+                    let list = document.getElementsByClassName("image-showcase")
+                    for(let i = 0; i < list.length; i++){
+                        console.log(list[i])
+                        list[i].style.height = "35%"
+                        list[i].style.opacity = "100%"
+                    }
+                    document.getElementsByClassName("main-menu")[0].style.height = "0"
+                    document.getElementsByClassName("main-menu")[0].style.opacity = "0"
+                    lastClick = 0
+                }
+                else{
+                    let list = document.getElementsByClassName("image-showcase")
+                    for(let i = 0; i < list.length; i++){
+                        console.log(list[i])
+                        list[i].style.height = "0"
+                        list[i].style.opacity = "0"
+                    }
+                    document.getElementsByClassName("main-menu")[0].style.height = "70vh"
+                    document.getElementsByClassName("main-menu")[0].style.opacity = "100%"
+                    if(type === 1){
+                        document.getElementById("content-window-1").style.height = "100%"
+                        document.getElementById("content-window-1").style.opacity = "100%"
+                        document.getElementById("content-window-2").style.height = "0"
+                        document.getElementById("content-window-2").style.opacity = "0"
+                        document.getElementById("content-window-3").style.height = "0"
+                        document.getElementById("content-window-3").style.opacity = "0"
+                    }
+                    else if(type === 2){
+                        document.getElementById("content-window-1").style.height = "0"
+                        document.getElementById("content-window-1").style.opacity = "0"
+                        document.getElementById("content-window-2").style.height = "100%"
+                        document.getElementById("content-window-2").style.opacity = "100%"
+                        document.getElementById("content-window-3").style.height = "0"
+                        document.getElementById("content-window-3").style.opacity = "0"
+                    }
+                    else if(type === 3){
+                        document.getElementById("content-window-1").style.height = "0"
+                        document.getElementById("content-window-1").style.opacity = "0"
+                        document.getElementById("content-window-2").style.height = "0"
+                        document.getElementById("content-window-2").style.opacity = "0"
+                        document.getElementById("content-window-3").style.height = "100%"
+                        document.getElementById("content-window-3").style.opacity = "100%"
+                    }
+                    lastClick = type
+                }
+                
+            
+            }
+        </script>
     </body>
 </html>
