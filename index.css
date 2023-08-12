@@ -1,0 +1,174 @@
+
+@font-face {
+    font-family: mainFont;
+    src: url(/static/aptos.ttf);
+  }
+
+*{
+    font-family: mainFont;
+}
+
+html, body{
+    margin: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    top: 0;
+    left: 0;    
+    height: 100%;
+    width: 100%;
+}
+
+.main-hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: black;
+    height: 80%;
+    width: 80%;
+    flex-direction: column;
+    
+}
+
+.main-banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+}
+
+.banner-item{
+    margin: 10px;
+}
+
+.main-logo{
+    opacity: 0%;
+    animation: intro-logo .5s ease-in-out .5s;
+    animation-fill-mode: forwards; 
+}
+
+.main-slogan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.slogan{
+    width: 0vw;
+    opacity: 0%;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+}
+
+#slogan-1{
+    animation: intro-slogan .5s ease-in-out 1s;
+    animation-fill-mode: forwards; 
+}
+
+#slogan-2{
+    animation: intro-slogan .5s ease-in-out 1.5s;
+    animation-fill-mode: forwards; 
+}
+
+#slogan-3{
+    animation: intro-slogan .5s ease-in-out 2s;
+    animation-fill-mode: forwards; 
+}
+
+.main-title{
+    width: 0vw;
+    overflow: hidden;
+    animation: intro-title .75s ease-in-out 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.main-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    background-color: black;
+    height: 0vh;
+    animation: intro-nav .75s ease-in-out 3.25s;
+    animation-fill-mode: forwards;
+
+}
+
+.nav-item{
+    font-size: 3rem;
+    color: white;
+}
+
+@media only screen and (max-width: 1400px){
+    .main-slogan{
+        flex-direction: row;
+    }
+
+    .slogan{
+        justify-content: center;
+    }
+
+    .main-banner{
+        flex-direction: column;
+        height: 30%;
+    }
+
+    .main-logo{
+        display: none;
+    }
+
+    
+
+}
+
+@keyframes intro-logo {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes intro-slogan {
+    0%{
+        width: 0vw;
+        opacity: 0%;
+    }
+    100%{
+        width: 14rem;
+        opacity: 100%;
+    }
+}
+
+@keyframes intro-title {
+    0%{
+        width: 0vw;
+    }
+    100%{
+        width: 100%;
+    }
+    
+}
+
+@keyframes intro-nav {
+    0%{
+        height: 0vh;
+    }
+    100%{
+        height: 4rem;
+    }
+    
+}
