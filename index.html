@@ -10,19 +10,14 @@
         <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     </head>
     <body>
-        <div class="main-container">
+        <div class="main-container">    
+            <div class="main-background">
+                <div class="main-background-image" id="bk-img-1" style="background-image: url(/static/bike1.webp); background-position: 20%;"></div>
+                <div class="main-background-image" id="bk-img-2" style="background-image: url(/static/bike2.webp); background-position: 20%;"></div>
+                <div class="main-background-image" id="bk-img-3" style="background-image: url(/static/bike1.webp); background-position: 70%;"></div>
+                <div class="main-background-image" id="bk-img-4" style="background-image: url(/static/bike2.webp); background-position: 0%;"></div>
+            </div>
             <div class="main-hero">
-                <div class="image-showcase" id="top-showcase">
-                    <div class="showcase-image" id="img-3">
-                        img
-                    </div>
-                    <div class="showcase-image" id="img-2">
-                        img
-                    </div>
-                    <div class="showcase-image" id="img-1">
-                        img
-                    </div>
-                </div>
                 
                 <div class="main-banner">
                     <div class="main-slogan banner-item">
@@ -49,7 +44,11 @@
                 <div class="main-menu">
                     <div class="content-window" id="content-window-1">
                         <div class="content-window-text">
-                            Conteeent 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et purus ultrices, molestie tortor ac, fringilla elit. Donec tempor ullamcorper ex vitae maximus. Curabitur et blandit erat. Suspendisse ut nisi tortor. Vestibulum lorem eros, fermentum vitae nisi non, consectetur vulputate nisi. Nunc at pretium tellus. Nullam molestie erat nec dignissim condimentum. Aenean congue erat blandit odio viverra, nec scelerisque quam lacinia. Quisque ullamcorper dui tempus varius maximus. Morbi pellentesque erat vestibulum, dapibus mauris ac, dictum orci. Nulla a purus rutrum, imperdiet nibh nec, hendrerit est. Nulla ultrices condimentum lectus ac molestie. Praesent volutpat sagittis lectus at tempor. Vestibulum interdum nisi ac pulvinar posuere.
+                            <div class="content-window-text-box">
+                                Conteeent 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et purus ultrices, molestie torto Conteeent 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et purus ultrices, molestie tortor ac, fringilla elit. Donec consectetur adipiscing elit. Mauris et purus ultrices, molestie torto Conteeent 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et purus ultrices, molestie tortor ac, fringilla elit. Donec
+                                
+                                consectetur adipiscing elit. Mauris et purus ultrices, molestie torto Conteeent 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et purus ultrices, molestie tortor ac, fringilla elit. Donec
+                            </div>
                         </div>
                         <div class="content-window-img">
                         </div>
@@ -62,26 +61,14 @@
                         </div>
                     </div>
                     <div class="content-window" id="content-window-3">
-                        <div class="content-window-text">
-                            Conteeent 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et purus ultrices, molestie tortor ac, fringilla elit. Donec tempor ullamcorper ex vitae maximus. Curabitur et blandit erat. Suspendisse ut nisi tortor. Vestibulum lorem eros, fermentum vitae nisi non, consectetur vulputate nisi. Nunc at pretium tellus. Nullam molestie erat nec dignissim condimentum. Aenean congue erat blandit odio viverra, nec scelerisque quam lacinia. Quisque ullamcorper dui tempus varius maximus. Morbi pellentesque erat vestibulum, dapibus mauris ac, dictum orci. Nulla a purus rutrum, imperdiet nibh nec, hendrerit est. Nulla ultrices condimentum lectus ac molestie. Praesent volutpat sagittis lectus at tempor. Vestibulum interdum nisi ac pulvinar posuere.
-                        </div>
-                        <div class="content-window-img">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="image-showcase" id="bottom-showcase">
-                    <div class="showcase-image" id="img-1">
-                        img
-                    </div>
-                    <div class="showcase-image" id="img-2">
-                        img
-                    </div>
-                    <div class="showcase-image" id="img-3">
-                        img
+                        Please send business inquiries to rikanosbikes@gmail.com
                     </div>
                 </div>
             </div>
+            <div class="footer">
+                Rikanos Bikes © 2023
+            </div>
+            
             
 
         </div>
@@ -107,7 +94,7 @@
                         list[i].style.height = "0"
                         list[i].style.opacity = "0"
                     }
-                    document.getElementsByClassName("main-menu")[0].style.height = "70vh"
+                    document.getElementsByClassName("main-menu")[0].style.height = "60vh"
                     document.getElementsByClassName("main-menu")[0].style.opacity = "100%"
                     if(type === 1){
                         document.getElementById("content-window-1").style.height = "100%"

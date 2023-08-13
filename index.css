@@ -13,6 +13,7 @@ html, body{
     top: 0;
     left: 0;
     height: 100%;
+    background-color: black;
 }
 
 .main-container{
@@ -24,17 +25,40 @@ html, body{
     left: 0;    
     height: 100%;
     width: 100%;
+    background-color: white;
 }
 
 .main-hero{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    border: black;
-    height: 95%;
-    width: 95%;
+    justify-content: center;
     flex-direction: column;
-    
+    opacity: .80;
+}
+
+.main-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.main-background-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    flex: 1;
+    opacity: 0;
+
 }
 
 .main-banner{
@@ -131,9 +155,12 @@ html, body{
     align-items: center;
     opacity: 0;
     height: 0;
-    background-color: black;
-    transition: .5s cubic-bezier(0.47, 0, 0.745, 0.715);
-    flex-direction: column;
+    width: 80%;
+    background-color: rgba(0, 0, 0, .75);
+    transition: .5s ease-in-out;
+    flex-direction: column; 
+    margin-top: 20px;
+    padding: 2% 2% 2% 2%;
 }
 
 .content-window{
@@ -145,7 +172,6 @@ html, body{
     transition: .5s ease-in-out;
     color: white;
     font-size: 1.5rem;
-    flex-direction: column;
     overflow: hidden;
 }
 
@@ -153,76 +179,55 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    vertical-align: text-top;
+    margin: 0 1% 1% 1%;
+
 }
 
 .content-window-img{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.image-showcase{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 35%;
-    flex-direction: column;
-    overflow: hidden;
-    transition: .5s cubic-bezier(0.47, 0, 0.745, 0.715);
-    
-}
-
-#top-showcase:hover{
-    height: 70%;
-}
-
-#top-showcase:hover ~ #bottom-showcase{
-    height: 0;
-}
-
-#bottom-showcase:hover{
-    height: 70%;
-}
-
-#bottom-showcase:hover ~ #top-showcase{
-    height: 0;
-}
-
-.showcase-image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(/static/bike1.webp);
+    background-image: url(/static/bike2.webp);
+    background-position: 30%;
     background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 30%;
-    opacity: 0;
-    flex: 1;
-    transition: .5s ease-in-out;
-    overflow: hidden;
-}
+    min-width: 50%;
+    height: 100%;
+}   
 
-.showcase-image:hover{
-    flex: 10;
-}
-
-#img-1{
-    animation: fadeIn .5s ease-in-out 3s;
+#bk-img-1{
+    animation: fadeInLess .5s ease-in-out 3s;
     animation-fill-mode: forwards;
 }
 
-#img-2{
-    animation: fadeIn .5s ease-in-out 3.25s;
+#bk-img-2{
+    animation: fadeInLess .5s ease-in-out 3.25s;
     animation-fill-mode: forwards;  
 }
 
-#img-3{
-    animation: fadeIn .5s ease-in-out 3.5s;
+#bk-img-3{
+    animation: fadeInLess .5s ease-in-out 3.5s;
     animation-fill-mode: forwards;
 }
 
+#bk-img-4{
+    animation: fadeInLess .5s ease-in-out 3.75s;
+    animation-fill-mode: forwards;
+}
+
+.footer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color:white;
+    height: 30vh;
+    width: 100%;
+    top: 100%;
+    flex-direction: column;
+}
 @media only screen and (max-width: 1400px){
 
     .main-slogan{
@@ -329,5 +334,14 @@ html, body{
     }
     100%{
         opacity: 100%;
+    }
+}
+
+@keyframes fadeInLess {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 50%;
     }
 }
